@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>石牌車站</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC",sans-serif;
+  font-weight:300;
+  background:#000;
+}
+
+/* 背景 */
+.hero{
+  position:relative;
+  min-height:100vh;
+  padding:24px 16px 44px;
+
+  background:
+    radial-gradient(1200px 800px at 20% 10%, rgba(255,255,255,.12), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,.22), rgba(0,0,0,.48)),
+    url("images/bg.jpg");
+
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+.hero-content{
+  position:relative;
+  max-width:900px;
+  margin:0 auto;
+  color:#fff;
+}
+
+/* 最上方影片 */
+.video-box{
+  width:100%;
+  overflow:hidden;
+  border-radius:16px;
+  background:#000;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 40px rgba(0,0,0,.35);
+}
+
+.video-box video{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:70vh;
+  object-fit:contain;
+  background:#000;
+}
+
+/* 音檔播放器 */
+.audio-box{
+  margin-top:18px;
+  padding:14px 16px;
+  border-radius:16px;
+  background:rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 40px rgba(0,0,0,.35);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+}
+
+.audio-box audio{
+  display:block;
+  width:100%;
+}
+
+/* 文字區：半透明玻璃感 */
+.hero-text{
+  margin-top:18px;
+  font-size:20px;
+  line-height:1.9;
+  padding:18px;
+  border-radius:16px;
+  background:rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 40px rgba(0,0,0,.35);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+}
+
+.hero-title{
+  text-align:center;
+  font-size:34px;
+  font-weight:600;
+  margin:8px 0 18px;
+  letter-spacing:.5px;
+  color:#fff;
+}
+
+.hero-text p{
+  text-indent:2em;
+  margin:12px 0;
+  font-weight:300;
+}
+
+
+@media(min-width:768px){
+  .hero-title{font-size:44px;}
+  .hero-text{font-size:22px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <div class="hero-content">
+
+    <h2 class="hero-title">石牌車站</h2>
+
+    <!-- 1. 最上方影片：瀏覽器會自動選擇可支援的格式；loop = 播完自動重播 -->
+    <div class="video-box">
+      <video controls loop playsinline preload="metadata">
+        <source src="videos/shipai.mp4" type="video/mp4">
+        <source src="videos/shipai.webm" type="video/webm">
+        <source src="videos/shipai.ogv" type="video/ogg">
+        您的瀏覽器不支援 HTML5 影片播放。
+      </video>
+    </div>
+
+    <!-- 2. 音檔播放器：同樣提供多種格式 -->
+    <div class="audio-box">
+      <audio controls preload="metadata">
+        <source src="audio/shipai.mp3" type="audio/mpeg">
+        <source src="audio/shipai.m4a" type="audio/mp4">
+        <source src="audio/shipai.ogg" type="audio/ogg">
+        <source src="audio/shipai.wav" type="audio/wav">
+        您的瀏覽器不支援 HTML5 音訊播放。
+      </audio>
+    </div>
+
+    <!-- 3. 文字內容 -->
+    <div class="hero-text">
+      <p>石牌車站的前身為日治時期的「唭里岸乘降場」，1915年配合淡水線汽動車運行而設立。戰後仍沿用唭里岸站名，1955年正式改稱「石牌站」。隨著戰後石牌地區逐漸發展，榮民總醫院、陽明醫學院等醫療與教育設施也陸續設立，石牌站成為地方重要的交通據點。1988年臺鐵淡水線停駛，舊石牌站隨之走入歷史；1997年捷運淡水線通車，捷運石牌站正式啟用。值得注意的是，昔日臺鐵石牌站位於今日捷運石牌站南方、自強街底一帶，兩座車站並不在完全相同的位置。</p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
